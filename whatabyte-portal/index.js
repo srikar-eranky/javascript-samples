@@ -18,7 +18,9 @@ const port = process.env.PORT || "8000";
 
 app.get("/", (req, res) => {
     //res.status(200).send("WHATABYTE: Food For Devs");
+    console.log("GET request at port 8000");
     res.sendFile(__dirname + '/index.html');
+    
   });
 
   /**
