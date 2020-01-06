@@ -22,7 +22,6 @@ app.get("/", (req, res) => {
     console.log("GET request at port 8000 ....");
     console.log(req.hostname);
     console.log(req.headers["accept-language"]);
-    console.log(req.headers["cache-control"]);
     res.sendFile(__dirname + '/index.html');
     
   });
