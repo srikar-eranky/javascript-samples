@@ -11,6 +11,7 @@ const path = require("path");
 
 const app = express();
 const port = process.env.PORT || "8000";
+app.use(express.urlencoded({extended:true}));
 
 /**
  * Routes Definitions
@@ -25,6 +26,12 @@ app.get("/", (req, res) => {
     res.sendFile(__dirname + '/index.html');
     
   });
+
+  app.post("form_submit",(req,res) => {
+    console.log("recvd post request");
+  });
+
+  
 
   /**
  * Server Activation
