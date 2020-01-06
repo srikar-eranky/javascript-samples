@@ -30,6 +30,7 @@ app.get("/", (req, res) => {
   app.post("form_submit",(req,res) => {
     console.log("recvd post request");
     console.log(req.baseUrl);
+    console.log(req.hostname);
   });
 
   
